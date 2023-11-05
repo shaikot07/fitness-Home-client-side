@@ -1,0 +1,42 @@
+[
+      {
+            "id": 1,
+            "img": "https://i.ibb.co/qBKPL7V/01.jpg",
+            "name": "FitZone Gym",
+            "description": "A state-of-the-art fitness center with top-notch equipment.",
+            "gym_owner_name": "John Smith",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
+            "price": 160,
+            "gym_location": "123 Main Street, Cityville"
+      },
+      {
+            "id": 2,
+            "img": "https://i.ibb.co/M1RhF8n/03.jpg",
+            "name": "PowerGym",
+            "description": "Build strength and endurance with our expert trainers.",
+            "gym_owner_name": "Emma Davis",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
+            "price": 170,
+            "gym_location": "456 Elm Avenue, Townsville"
+      },
+      {
+            "id": 3,
+            "img": "https://i.ibb.co/NZWyZXW/04.jpg",
+            "name": "CardioFit Center",
+            "description": "Get your heart pumping with our cardio-focused workouts.",
+            "gym_owner_name": "Michael Johnson",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
+            "price": 180,
+            "gym_location": "789 Oak Lane, Fitnessburg"
+      },
+      {
+            "id": 4,
+            "img": "https://i.ibb.co/Kwmgpn1/05.webp",
+            "name": "Yoga Bliss",
+            "description": "Find inner peace and flexibility through yoga practice.",
+            "gym_owner_name": "Sophia Lee",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
+            "price": 190,
+            "gym_location": "101 Pine Street, Yogaville"
+      }
+]
