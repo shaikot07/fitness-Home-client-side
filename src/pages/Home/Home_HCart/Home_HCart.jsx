@@ -4,8 +4,8 @@ import Home_cart_details from './Home_cart_details';
 const Home_HCart = () => {
 
       const [data, setData] = useState([])
-      console.log(data);
-      useEffect(() => {
+      // console.log(data);
+      useEffect(() => { 
             fetch('/public/H_data.json')
                   .then(res => res.json())
                   .then(data => setData(data))

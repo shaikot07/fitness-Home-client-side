@@ -5,7 +5,7 @@
             "name": "FitZone Gym",
             "description": "A state-of-the-art fitness center with top-notch equipment.",
             "gym_owner_name": "John Smith",
-            "gym_owner_img": "owner1.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 160,
             "gym_location": "123 Main Street, Cityville"
       },
@@ -15,7 +15,7 @@
             "name": "FitZone Gym",
             "description": "Build strength and endurance with our expert trainers.",
             "gym_owner_name": "Emma Davis",
-            "gym_owner_img": "owner2.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 170,
             "gym_location": "456 Elm Avenue, Townsville"
       },
@@ -25,7 +25,7 @@
             "name": "FitZone Gym",
             "description": "Get your heart pumping with our cardio-focused workouts.",
             "gym_owner_name": "Michael Johnson",
-            "gym_owner_img": "owner3.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 180,
             "gym_location": "789 Oak Lane, Fitnessburg"
       },
@@ -35,7 +35,7 @@
             "name": "Yoga Bliss",
             "description": "Find inner peace and flexibility through yoga practice.",
             "gym_owner_name": "Sophia Lee",
-            "gym_owner_img": "owner4.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 190,
             "gym_location": "101 Pine Street, Yogaville"
       },
@@ -45,7 +45,7 @@
             "name": "Yoga Bliss",
             "description": "Intense crossfit workouts for ultimate fitness and strength.",
             "gym_owner_name": "Robert Wilson",
-            "gym_owner_img": "owner5.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 200,
             "gym_location": "202 Cedar Road, Crossfit City"
       },
@@ -55,7 +55,7 @@
             "name": "Yoga Bliss",
             "description": "Build both strength and flexibility with our dedicated trainers.",
             "gym_owner_name": "Emily Johnson",
-            "gym_owner_img": "owner6.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 210,
             "gym_location": "303 Oak Avenue, Strengthville"
       },
@@ -65,7 +65,7 @@
             "name": "Yoga Bliss",
             "description": "Sweat it out with our high-energy spinning classes.",
             "gym_owner_name": "Daniel Brown",
-            "gym_owner_img": "owner7.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 220,
             "gym_location": "404 Elm Street, Spintown"
       },
@@ -75,7 +75,7 @@
             "name": "Martial Arts Dojo",
             "description": "Learn self-defense and discipline with our martial arts classes.",
             "gym_owner_name": "Linda Martinez",
-            "gym_owner_img": "owner8.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 230,
             "gym_location": "505 Maple Lane, Martial City"
       },
@@ -85,7 +85,7 @@
             "name": "Martial Arts Dojo",
             "description": "Dance your way to fitness with our diverse dance programs.",
             "gym_owner_name": "William Turner",
-            "gym_owner_img": "owner9.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 240,
             "gym_location": "606 Oak Road, Danceville"
       },
@@ -95,7 +95,7 @@
             "name": "Martial Arts Dojo",
             "description": "A holistic approach to fitness and well-being for a better life.",
             "gym_owner_name": "Olivia Adams",
-            "gym_owner_img": "owner10.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 250,
             "gym_location": "707 Pine Avenue, Wellnessburg"
       },
@@ -105,7 +105,7 @@
             "name": "Boxing Arena",
             "description": "Train like a champion in our boxing facility for a knockout workout.",
             "gym_owner_name": "Andrew Turner",
-            "gym_owner_img": "owner11.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 260,
             "gym_location": "808 Cedar Street, Boxing City"
       },
@@ -115,7 +115,7 @@
             "name": "Boxing Arena",
             "description": "Strengthen your core and improve posture through pilates exercises.",
             "gym_owner_name": "Sophie Harris",
-            "gym_owner_img": "owner12.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 270,
             "gym_location": "909 Maple Avenue, Pilatesville"
       },
@@ -125,7 +125,7 @@
             "name": "Boxing Arena",
             "description": "Train for everyday movements and functional strength at our fitness center.",
             "gym_owner_name": "Ella Rogers",
-            "gym_owner_img": "owner14.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 280,
             "gym_location": "1111 Pine Road, Functionville"
       },
@@ -135,7 +135,7 @@
             "name": "Swim & Splash Club",
             "description": "Dive into fitness with our swimming programs and aquatic fun for a refreshing workout.",
             "gym_owner_name": "Henry White",
-            "gym_owner_img": "owner15.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 290,
             "gym_location": "1212 Cedar Avenue, Swimtown"
       },
@@ -145,7 +145,7 @@
             "name": "Swim & Splash Club",
             "description": "Dive into fitness with our swimming programs and aquatic fun for a refreshing workout.",
             "gym_owner_name": "Henry White",
-            "gym_owner_img": "owner15.jpg",
+            "gym_owner_img": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
             "price": 290,
             "gym_location": "1212 Cedar Avenue, Swimtown"
       },
@@ -155,7 +155,7 @@
             "name": "Swim & Splash Club",
             "description": "Dive into fitness with our swimming programs and aquatic fun for a refreshing workout.",
             "gym_owner_name": "Henry White",
-            "gym_owner_img": "owner15.jpg",
+            "gym_owner_img": "https://i.ibb.co/BcqJ1GJ/woner.jpg",
             "price": 290,
             "gym_location": "1212 Cedar Avenue, Swimtown"
       }
