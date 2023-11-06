@@ -12,7 +12,7 @@ const Services = () => {
             .then(data =>setData(data))
       },[])
       return (
-            <div className='max-w-6xl mx-auto h-[400px] bg-green-500 pt-9 '>
+            <div className='max-w-6xl mx-auto  pt-9 '>
                   <div className='max-w-[400px] mx-auto'>
                         <fieldset className="w-full space-y-1 dark:text-gray-100">
                               
@@ -23,6 +23,9 @@ const Services = () => {
                         </fieldset>
                   </div>
                   <div>
+                        <h2 className='text-center text-4xl text-[#E31C25] font-semibold mt-12' >All Services</h2>
+                  </div>
+                  <div className=''>
                         {
                               data.filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data.id} data={data}></ServicesCard>)
                         }
