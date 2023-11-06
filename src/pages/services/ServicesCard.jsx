@@ -3,7 +3,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const ServicesCard = ({ data }) => {
-      const {id,img,name,description,price,gym_owner_img,gym_owner_name,gym_location}=data || {}
+      const {_id,img,name,description,price,gym_owner_img,gym_owner_name,gym_location}=data || {}
       return (
             <div className='flex justify-center mt-16 mb-16'>
                   <div className="relative flex max-w-[550px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -37,7 +37,7 @@ const ServicesCard = ({ data }) => {
                               </p>
                         </div>
                         <div className='w-full mx-auto mt-5 mb-0'>
-                              <Link to={`/servicesditels/${id}`}><button className='bg-[#E31C25] text-white p-2 w-full  rounded-lg hover:bg-black'>View Detail Button</button></Link>
+                              <Link to={`/servicesditels/${_id}`}><button className='bg-[#E31C25] text-white p-2 w-full  rounded-lg hover:bg-black'>View Detail Button</button></Link>
                         </div>
                   </div>
             </div>

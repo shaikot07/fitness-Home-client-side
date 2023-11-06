@@ -7,7 +7,7 @@ import Footer from '../pages/Sheard/Footer';
 const Main = () => {
       return (
             <div>
-                 <div className=' bg-red-700 z-50'>
+                 <div className=' bg-red-700'>
                  <Navbar></Navbar>
                  </div>
                  

@@ -7,7 +7,7 @@ const Services = () => {
       const [data,setData]=useState([])
       // console.log(data);
       useEffect(()=>{
-            fetch('/public/data.json')
+            fetch('http://localhost:5000/services')
             .then(res =>res.json())
             .then(data =>setData(data))
       },[])
@@ -27,7 +27,7 @@ const Services = () => {
                   </div>
                   <div className=''>
                         {
-                              data.filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data.id} data={data}></ServicesCard>)
+                              data.filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data._id} data={data}></ServicesCard>)
                         }
                   </div>
                   

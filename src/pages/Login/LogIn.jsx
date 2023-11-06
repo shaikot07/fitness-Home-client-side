@@ -49,8 +49,8 @@ const LogIn = () => {
             <div className=''>
             <div className="flex flex-col max-w-[400px]  p-4 rounded-md sm:p-6 bg-gray-900 text-gray-100 mx-auto mt-12">
                   <div className="mb-8 text-center">
-                        <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Sign in</h1>
-                        <p className="text-sm text-gray-400">Sign in to access your account</p>
+                        <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Log In</h1>
+                        <p className="text-sm text-gray-400">Log in to access your account</p>
                   </div>
                   <form onSubmit={ handleLogIn} className="space-y-6">
                         <div className="space-y-4">

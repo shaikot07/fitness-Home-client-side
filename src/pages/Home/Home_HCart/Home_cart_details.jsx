@@ -3,7 +3,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const Home_cart_details = ({ data }) => {
-      const { id, img, name, description, gym_location, gym_owner_img, gym_owner_name,price } = data || {}
+      const { _id, img, name, description, gym_location, gym_owner_img, gym_owner_name,price } = data || {}
       return (
             <div>
                   <div className="relative flex max-w-[450px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">

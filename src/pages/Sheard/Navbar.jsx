@@ -12,9 +12,9 @@ const Navbar = () => {
       }
 
       const links = <>
-            <li> <NavLink to="/">Home</NavLink></li>
-            <li> <NavLink to="/services">Services</NavLink></li>
-            <li> <NavLink to="/bookings">My Bookings</NavLink></li>
+            <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
+            <li> <NavLink to="/services"className="hover:bg-black hover:text-white" >Services</NavLink></li>
+            <li> <NavLink to="/bookings" className="hover:bg-black hover:text-white">My Bookings</NavLink></li>
 
             {
                   user?.email ?
@@ -23,11 +23,12 @@ const Navbar = () => {
                               <li tabIndex={0} className=''>
                                     <details>
                                           <summary>Dashboard</summary>
-                                          <ul className="p-2 bg-gray-500 ">
-                                                <li ><a> My-services</a></li>
-                                                <li> <NavLink to="/myservices">My-services</NavLink></li>
-                                                <li><a>Add-services</a></li>
-                                                <li><a>My-schedules </a></li>
+                                          <ul className="p-2 bg-gray-500 z-50 w-[140px]">
+                                                
+                                                <li> <NavLink to="/myservices" className="hover:bg-red-700 hover:text-white">My-services</NavLink></li>
+                                                <li> <NavLink to="/addservices" className="hover:bg-red-700 hover:text-white">Add-services</NavLink></li>
+                                                <li> <NavLink to="/myschedules" className="hover:bg-red-700 hover:text-white">My-schedules</NavLink></li>
+                                                
                                           </ul>
                                     </details>   </li>
 
@@ -42,7 +43,7 @@ const Navbar = () => {
       return (
             <div className="navbar bg-red-700 text-white max-w-6xl mx-auto ">
                   <div className="navbar-start">
-                        <div className="dropdown">
+                        <div className="dropdown absolute z-[99]">
                               <label tabIndex={0} className="btn btn-ghost lg:hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                               </label>
