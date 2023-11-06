@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddService_page = () => {
-      const {user}=useContext(AuthContext)
+      const { user } = useContext(AuthContext)
 
-      const handleAddButton =(event)=>{
+      const handleAddButton = (event) => {
             event.preventDefault()
             const form = event.target
             const img = form.img.value;
@@ -14,8 +15,28 @@ const AddService_page = () => {
             const price = form.price.value;
             const area = form.area.value;
             const description = form.description.value;
-            const addNewProduct={img,serviceName,email,providerName,price,area,description,}
+            const addNewProduct = { img, serviceName, email, providerName, price, area, description, }
             console.log(addNewProduct);
+            fetch('http://localhost:5000/newservices', {
+                  method: 'POST',
+                  headers: {
+                        'content-type': 'application/json'
+                  },
+                  body: JSON.stringify(addNewProduct)
+            })
+                  .then(res => res.json())
+                  .then(data => {
+                        console.log(data);
+                        if (data.insertedId) {
+                              Swal.fire({
+                                    title: "Good job!",
+                                    text: "Product added SuccessFully",
+                                    icon: "success"
+                              });
+                        }
+
+                  }).catch(error => console.log(error))
+
       }
       return (
             <div>
@@ -33,7 +54,7 @@ const AddService_page = () => {
                                           </div>
                                           <div className="col-span-full sm:col-span-3">
                                                 <label className="text-sm"> Service Name</label>
-                                                <input type="text" name='serviceName'  placeholder=" Service Name" className="w-full rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+                                                <input type="text" name='serviceName' placeholder=" Service Name" className="w-full rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
                                           </div>
                                           <div className="col-span-full sm:col-span-3">
                                                 <label className="text-sm">Email</label>
@@ -58,7 +79,7 @@ const AddService_page = () => {
                                     </div>
                                     <button type="submit" className="px-4 py-2 border bg-red-700 hover:bg-slate-900 rounded-md dark:border-gray-100">Added Service</button>
                               </fieldset>
-                              
+
                         </form>
                   </section>
             </div>
