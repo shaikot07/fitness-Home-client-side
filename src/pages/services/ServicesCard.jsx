@@ -37,7 +37,7 @@ const ServicesCard = ({ data }) => {
                               </p>
                         </div>
                         <div className='w-full mx-auto mt-5 mb-0'>
-                              <Link to={`/services/${id}`}><button className='bg-[#E31C25] text-white p-2 w-full  rounded-lg hover:bg-black'>View Detail Button</button></Link>
+                              <Link to={`/servicesditels/${id}`}><button className='bg-[#E31C25] text-white p-2 w-full  rounded-lg hover:bg-black'>View Detail Button</button></Link>
                         </div>
                   </div>
             </div>

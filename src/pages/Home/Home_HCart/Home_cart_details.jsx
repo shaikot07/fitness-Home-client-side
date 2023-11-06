@@ -13,12 +13,12 @@ const Home_cart_details = ({ data }) => {
                                     alt="ui/ux review check"
                               />
                         </div>
-                        <div className="p-6">
+                        <div className="px-6">
                               <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-[#E31C25] ">
                                     {name}
                               </h4>
                               
-                              <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+                              <p className="block  font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
                                     {description}
                               </p>
                               <h2 className='text-2xl text-[#E31C25]'>$ {price}</h2>
@@ -37,7 +37,7 @@ const Home_cart_details = ({ data }) => {
                                     </p>
                         </div>
                         <div className='w-1/2 mx-auto mt-5 mb-5'>
-                        <Link to="/services"><button className='bg-[#E31C25] text-white p-2  rounded-lg hover:bg-black'>Show all Button</button></Link>
+                        <Link to="/services"><button className='bg-[#E31C25] text-white p-2  rounded-lg hover:bg-black'>Show All button</button></Link>
                         </div>
                   </div>
             </div>

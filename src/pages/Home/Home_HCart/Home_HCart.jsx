@@ -11,7 +11,8 @@ const Home_HCart = () => {
                   .then(data => setData(data))
       }, [])
       return (
-            <div className='grid grid-cols-2 gap-6'>
+            
+            <div className='grid grid-cols-2 gap-6 mt-28 mb-20'>
                  {
                   data.map(data =><Home_cart_details key={data.id} data={data}></Home_cart_details>)
                  }
