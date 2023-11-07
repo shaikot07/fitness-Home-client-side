@@ -68,7 +68,7 @@ const ServiceDetails = () => {
                   .then(res => res.json())
                   .then(data => {
                         console.log(data);
-                        if (data.insertedId) {
+                        if (data.insertedId >0) {
                               Swal.fire({
                                     title: "Good job!",
                                     text: "Booking SuccessFully",
@@ -197,6 +197,7 @@ const ServiceDetails = () => {
                                                                   <button onClick={() => document.getElementById('my_modal_5').close()} className="btn btn-outline">Close</button>
                                                                   <button type='submit' className='bg-[#E31C25] py-2 px-3 text-white rounded-lg hover:bg-slate-950'>Purchase this Service</button>
                                                             </div>
+                                                            
                                                       </form>
                                                 </div>
                                           </div>

@@ -37,7 +37,7 @@ const router = createBrowserRouter([
                   },
                   {
                         path:'servicesditels/:id',
-                        element:<ServiceDetails></ServiceDetails>
+                        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
                   },
                   {
                         path:'addservices',
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
                   },
                   {
                         path:'mybookings',
-                        element:<MyBooking></MyBooking>
+                        element:<PrivateRoute><MyBooking></MyBooking></PrivateRoute>
                   },
             ]
       }
