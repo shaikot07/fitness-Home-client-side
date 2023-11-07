@@ -14,7 +14,7 @@ const Navbar = () => {
       const links = <>
             <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
             <li> <NavLink to="/services"className="hover:bg-black hover:text-white" >Services</NavLink></li>
-            <li> <NavLink to="/mybookings" className="hover:bg-black hover:text-white">My Bookings</NavLink></li>
+           
 
             {
                   user?.email ?
@@ -27,7 +27,7 @@ const Navbar = () => {
                                                 
                                                 <li> <NavLink to="/manageservices" className="hover:bg-red-700 hover:text-white">Manage Services</NavLink></li>
                                                 <li> <NavLink to="/addservices" className="hover:bg-red-700 hover:text-white">Add-services</NavLink></li>
-                                                <li> <NavLink to="/myschedules" className="hover:bg-red-700 hover:text-white">My-schedules</NavLink></li>
+                                                <li> <NavLink to="/mybookings" className="hover:bg-red-700 hover:text-white">My Bookings</NavLink></li>
                                                 
                                           </ul>
                                     </details>   </li>

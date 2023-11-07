@@ -1,8 +1,10 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaLocationDot } from 'react-icons/fa6';
 
-const MyBookingLeft = ({ booking }) => {
-      const { _id, img, name, gym_owner_name, price, gym_location } = booking || {}
+const MyBookingLeft = ({ booking,handleBookingUpdate }) => {
+      const { _id, img, name, gym_owner_name, price, gym_location,status } = booking || {}
+
       return (
             <div>
                   <div className="max-w-[550px] p-8 sm:flex sm:space-x-6 bg-gray-900 text-gray-100 mb-5">
@@ -28,13 +30,11 @@ const MyBookingLeft = ({ booking }) => {
                               </div>
                         </div>
                         <div>
-                              <details className="dropdown">
-                                    <summary className="m-1 btn bg-[#E31C25]">Pending</summary>
-                                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-red-400 rounded-box w-[120px]  hover:text-white">
-                                          <li><a>In Progress</a></li>
-                                          <li><a>Completed</a></li>
-                                    </ul>
-                              </details>
+                              {
+                                    status === 'Pending' && ' In Progress'&& 'Completed' ? <span className='font-bold text-green-600'>Pending</span>
+                                          :
+                                          <button onClick={() => handleBookingUpdate(_id)} className="btn bg-red-700 text-white  hover:bg-slate-600">In progress</button>
+                              }
                         </div>
                   </div>
             </div>

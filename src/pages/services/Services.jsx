@@ -5,6 +5,7 @@ const Services = () => {
       const [searchInput, setSearchInput]=useState("")
       console.log(searchInput);
       const [data,setData]=useState([])
+      const [isShow, setIsShow] = useState(false)
       // console.log(data);
       useEffect(()=>{
             fetch('http://localhost:5000/services')
@@ -26,9 +27,24 @@ const Services = () => {
                         <h2 className='text-center text-4xl text-[#E31C25] font-semibold mt-12' >All Services</h2>
                   </div>
                   <div className=''>
-                        {
-                              data.filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data._id} data={data}></ServicesCard>)
+                        {   
+                              isShow ? data.filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data._id} data={data}></ServicesCard>)
+                              : data.slice(0,4).filter(df=>!searchInput?true:df.name.toUpperCase()=== searchInput.toUpperCase()).map(data =><ServicesCard key={data._id} data={data}></ServicesCard>)
                         }
+                  </div>
+                  <div>
+                  {data.length >= 4 && !isShow ? (
+                                    <div className="text-center mt-12">
+                                          <button
+                                                onClick={() => setIsShow(true)}
+                                                className="bg-green-700 text-white px-5 py-2"
+                                          >
+                                                See All
+                                          </button>
+                                    </div>
+                              ) : (
+                                    ''
+                              )}
                   </div>
                   
             </div>

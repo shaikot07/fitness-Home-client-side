@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MyBookingLeft from './MyBookingLeft';
+import toast from 'react-hot-toast';
 
 const MyBooking = () => {
       const [data, setData] = useState([]);
@@ -21,15 +22,44 @@ const MyBooking = () => {
                         setLoading(false);
                   });
       }, []);
+      const handleBookingUpdate = id =>{
+            fetch(`http://localhost:5000/bookings/${id}`,{
+                  method:'PATCH',
+                  headers:{
+                        'content-type': 'application/json'
+                  },
+                  body:JSON.stringify({status:'Pending'},{status:'In Progress'},{status:' Completed'})
+            })
+                  .then(res =>res.json())
+                  .then(data =>{
+                        console.log(data);
+                        if(data.modifiedCount > 0){
+                              toast.success('Pending')
+                              // update state 
+                              const remaining = data.filter(booking => booking._id !== id);
+                              const updated = data.find(booking => booking._id === id);
+                              updated.status='Pending'
+                              const newBooking = [updated, ...remaining];
+                              setData(newBooking)
+                        }
+                  })
+      }
+      if(loading){
+            return <div className="w-16 h-16 md:ml-[500px] mt-4 mb-4 border-4 border-dashed rounded-full animate-spin border-violet-400"></div>
+      }
       return (
-            <div>
-                  <div>
-                  <h1>{data.length}</h1>
+            <div className='max-w-6xl mx-auto flex justify-center mt-20'>
+                  <div className=''>
+
                    {
-                        data.map(booking =><MyBookingLeft key={booking._id} booking={booking}></MyBookingLeft>)
+                        data.length === 0 ? <h2 className='text-3xl text-yellow-400 mt-10 mb-28'>Not Booking data available</h2>:
+                        data.map(booking =><MyBookingLeft key={booking._id} 
+                              booking={booking}
+                              handleBookingUpdate={handleBookingUpdate}
+                              ></MyBookingLeft>)
                    }
                   </div>
-                  <div>this is for right side </div>
+                  
             </div>
       );
 };
