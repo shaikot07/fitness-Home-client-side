@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ServicesCard from './ServicesCard';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
       const [searchInput, setSearchInput]=useState("")
@@ -14,6 +15,9 @@ const Services = () => {
       },[])
       return (
             <div className='max-w-6xl mx-auto  pt-9 '>
+                  <Helmet>
+                        <title>FH || service</title>
+                  </Helmet>
                   <div className='max-w-[400px] mx-auto'>
                         <fieldset className="w-full space-y-1 dark:text-gray-100">
                               

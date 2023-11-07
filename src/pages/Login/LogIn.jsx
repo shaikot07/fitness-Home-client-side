@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import { FaGoogle } from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
 
 const LogIn = () => {
 
@@ -47,6 +48,9 @@ const LogIn = () => {
       }
       return (
             <div className=''>
+                  <Helmet>
+                        <title>FH || log in</title>
+                  </Helmet>
             <div className="flex flex-col max-w-[400px]  p-4 rounded-md sm:p-6 bg-gray-900 text-gray-100 mx-auto mt-12">
                   <div className="mb-8 text-center">
                         <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Log In</h1>

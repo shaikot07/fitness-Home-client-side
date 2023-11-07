@@ -1,12 +1,17 @@
 import React, { } from 'react';
 import Banner from './Banner/Banner';
 import Home_HCart from './Home_HCart/Home_HCart';
+import { Helmet } from 'react-helmet-async';
+import MeetOurTem from './extra/MeetOurTem';
 
 
 const Home = () => {
 
       return (
             <div>
+                  <Helmet>
+                        <title>FH ||home</title>
+                  </Helmet>
                   <Banner></Banner>
                   <div className='max-w-6xl mx-auto'>
                         <div>
@@ -15,6 +20,7 @@ const Home = () => {
                         </div>
                         <Home_HCart></Home_HCart>
                   </div>
+                  <MeetOurTem></MeetOurTem>
             </div>
       );
 };

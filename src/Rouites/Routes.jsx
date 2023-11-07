@@ -9,6 +9,7 @@ import AddService_page from "../pages/Adservice-page/AddService_page";
 import ManageServices from "../pages/Adservice-page/ManageServices/ManageServices";
 import PrivateRoute from "./PrivateRoute";
 import MyBooking from "../pages/MyBooking/MyBooking";
+import ErrorPage from "../pages/Sheard/ErrorPage";
 
 
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       {
             path:"/",
             element:<Main></Main>,
+            errorElement:<ErrorPage></ErrorPage>,
             children:[
                   {
                         path:'/',

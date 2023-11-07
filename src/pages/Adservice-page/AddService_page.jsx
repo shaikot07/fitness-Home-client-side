@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const AddService_page = () => {
       const { user } = useContext(AuthContext)
@@ -40,6 +41,9 @@ const AddService_page = () => {
       }
       return (
             <div>
+                  <Helmet>
+                        <title>FH || AddService</title>
+                  </Helmet>
                   <section className="p-6 text-gray-50">
                         <form onSubmit={handleAddButton} className="container flex flex-col mx-auto space-y-12">
                               <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900">

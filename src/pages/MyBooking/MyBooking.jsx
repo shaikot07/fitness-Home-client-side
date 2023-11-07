@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MyBookingLeft from './MyBookingLeft';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 const MyBooking = () => {
       const [data, setData] = useState([]);
@@ -49,6 +50,9 @@ const MyBooking = () => {
       }
       return (
             <div className='max-w-6xl mx-auto flex justify-center mt-20'>
+                  <Helmet>
+                        <title>FH || MyBooking</title>
+                  </Helmet>
                   <div className=''>
 
                    {

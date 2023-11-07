@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 
 const Register = () => {
@@ -44,6 +45,9 @@ const Register = () => {
       
       return (
             <div className=''>
+                  <Helmet>
+                        <title>FH || register</title>
+                  </Helmet>
                   <div className="flex flex-col max-w-[400px] h-[600px] p-4 rounded-md sm:p-6 bg-gray-900 text-gray-100 mx-auto mt-12">
                         <div className="mb-8 text-center">
                               <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Sign in</h1>

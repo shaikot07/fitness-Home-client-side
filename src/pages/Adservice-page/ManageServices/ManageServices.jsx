@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import ManageServicCard from './ManageServiceCard';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const ManageServices = () => {
       const { user}=useContext(AuthContext)
@@ -26,6 +27,9 @@ const ManageServices = () => {
       }
       return (
             <div className='max-w-6xl mx-auto'>
+                  <Helmet>
+                        <title>FH || ManageService</title>
+                  </Helmet>
                   {/* <h2>Your Bookings: {bookings.length}</h2> */}
 
                   <div className="overflow-x-auto">
