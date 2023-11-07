@@ -16,15 +16,7 @@ const ManageServices = () => {
                   setServicess(res.data);
                   setLoading(false)
               })
-            // fetch(url)
-            //       .then(res => res.json())
-            //       .then(data =>{
-            //             setServicess(data)
-            //             setLoading(false)
-            //       }).catch((error) =>{
-            //             console.log(error('Error fetching data:', error))
-            //             setLoading(false)
-            //       })
+            
                   
                  
       }, [url,control])
