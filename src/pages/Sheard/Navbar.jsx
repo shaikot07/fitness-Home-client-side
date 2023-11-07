@@ -14,7 +14,7 @@ const Navbar = () => {
       const links = <>
             <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
             <li> <NavLink to="/services"className="hover:bg-black hover:text-white" >Services</NavLink></li>
-            <li> <NavLink to="/bookings" className="hover:bg-black hover:text-white">My Bookings</NavLink></li>
+            <li> <NavLink to="/mybookings" className="hover:bg-black hover:text-white">My Bookings</NavLink></li>
 
             {
                   user?.email ?
