@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const AddService_page = () => {
       const { user } = useContext(AuthContext)
-
+      // console.log(user);
       const handleAddButton = (event) => {
             event.preventDefault()
             const form = event.target
@@ -58,7 +58,7 @@ const AddService_page = () => {
                                           </div>
                                           <div className="col-span-full sm:col-span-3">
                                                 <label className="text-sm">Email</label>
-                                                <input type="email" name='email' placeholder="Email" className="w-full rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+                                                <input type="email" name='email' readOnly value={user?.email} placeholder="Email" className="w-full rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
                                           </div>
                                           <div className="col-span-full">
                                                 <label className="text-sm">provider name</label>

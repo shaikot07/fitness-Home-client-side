@@ -25,7 +25,7 @@ const Navbar = () => {
                                           <summary>Dashboard</summary>
                                           <ul className="p-2 bg-gray-500 z-50 w-[140px]">
                                                 
-                                                <li> <NavLink to="/myservices" className="hover:bg-red-700 hover:text-white">My-services</NavLink></li>
+                                                <li> <NavLink to="/manageservices" className="hover:bg-red-700 hover:text-white">Manage Services</NavLink></li>
                                                 <li> <NavLink to="/addservices" className="hover:bg-red-700 hover:text-white">Add-services</NavLink></li>
                                                 <li> <NavLink to="/myschedules" className="hover:bg-red-700 hover:text-white">My-schedules</NavLink></li>
                                                 
