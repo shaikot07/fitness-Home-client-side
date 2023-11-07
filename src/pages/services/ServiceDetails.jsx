@@ -194,7 +194,7 @@ const ServiceDetails = () => {
 
                                                             {/* if there is a button in form, it will close the modal */}
                                                             <div className='flex gap-6 mt-3 justify-center'>
-                                                                  <button className="btn btn-outline">Close</button>
+                                                                  <button onClick={() => document.getElementById('my_modal_5').close()} className="btn btn-outline">Close</button>
                                                                   <button type='submit' className='bg-[#E31C25] py-2 px-3 text-white rounded-lg hover:bg-slate-950'>Purchase this Service</button>
                                                             </div>
                                                       </form>

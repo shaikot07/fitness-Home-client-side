@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import toast from 'react-hot-toast';
 
 const ManageServicCard = ({service,setControl,control}) => {
       const {user}=useContext(AuthContext)
@@ -33,9 +34,6 @@ const ManageServicCard = ({service,setControl,control}) => {
                                                 'success'
                                           )
                                           
-                                          // const remaining =products.filter(item =>item._id !== _id);
-                                          // // console.log(remaining);
-                                          // setProducts(remaining)
                                     }
                                     setControl(!control)
                               }).catch(error => {
@@ -43,6 +41,32 @@ const ManageServicCard = ({service,setControl,control}) => {
                               })
                   }
             })
+      }
+      const handleUpdate=event =>{
+            event.preventDefault()
+            const form = event.target
+            const img = form.img.value;
+            const serviceName = form.serviceName.value;
+            const description = form.description.value;
+            const price=form.price.value;
+            const area =form.area.value;
+           
+            const updateData = {img,serviceName,description,price,area,}
+            fetch(`http://localhost:5000/newservices/${_id}`, {
+                  method: 'PATCH',
+                  headers: {
+                        'content-type': 'application/json'
+                  },
+                  body: JSON.stringify( updateData)
+            })
+                  .then(res => res.json())
+                  .then(data => {
+                        console.log(data);
+                        if (data.matchedCount >0) {
+                              toast.success('update successfully')
+                        }
+
+                  }).catch(error => console.log(error))
       }
       return (
             
@@ -76,7 +100,7 @@ const ManageServicCard = ({service,setControl,control}) => {
                                                 <h3 className="font-bold text-lg">Hello!</h3>
                                                 {/* <p className="py-4">Press ESC key or click the button below to close</p> */}
                                                 <div className="flex">
-                                                      <form  method="dialog">
+                                                      <form onSubmit={ handleUpdate}  method="dialog">
 
                                                             <div className='grid grid-cols-2 gap-2'>
                                                                   <div>
@@ -132,7 +156,7 @@ const ManageServicCard = ({service,setControl,control}) => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="" defaultValue={`$${price}`} name='price' className="input input-bordered" />
+                                                                              <input type="number" placeholder="" defaultValue={`$${price}`} name='price' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   
@@ -140,7 +164,7 @@ const ManageServicCard = ({service,setControl,control}) => {
 
                                                             {/* if there is a button in form, it will close the modal */}
                                                             <div className='flex gap-6 mt-3 justify-center'>
-                                                                  <button className="btn btn-outline">Close</button>
+                                                                  <button onClick={() => document.getElementById('my_modal_5').close()} className="btn btn-outline">Close</button>
                                                                   <button type='submit' className='bg-[#E31C25] py-2 px-3 text-white rounded-lg hover:bg-slate-950'>Update</button>
                                                             </div>
                                                       </form>
