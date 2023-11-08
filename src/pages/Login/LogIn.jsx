@@ -6,7 +6,8 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import { FaGoogle } from "react-icons/fa6";
 import { Helmet } from 'react-helmet-async';
-
+import Lottie from 'lottie-react';
+import loginAnimetion from '../../assets/login-animetion.json'
 const LogIn = () => {
 
       const { logIn } = useContext(AuthContext)
@@ -47,11 +48,14 @@ const LogIn = () => {
                   })
       }
       return (
-            <div className=''>
+            <div className='max-w-6xl mx-auto'>
                   <Helmet>
                         <title>FH || log in</title>
                   </Helmet>
-                  <div>
+                  <div className='flex justify-center items-center'>
+                        <div className='w-[400px]'>
+                              <Lottie animationData={loginAnimetion}></Lottie>
+                        </div>
                         <div className="flex flex-col max-w-[400px]  p-4 rounded-md sm:p-6 bg-gray-900 text-gray-100 mx-auto mt-12">
                               <div className="mb-8 text-center">
                                     <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Log In</h1>

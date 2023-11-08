@@ -4,6 +4,8 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
+import { getAuth, updateProfile } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
 
 
 const Register = () => {
@@ -11,6 +13,7 @@ const Register = () => {
       const [showError, setShowError] = useState('')
       const [success, setSuccess] = useState('')
       const navigate = useNavigate()
+      const auth = getAuth(app)
       
 
       const handleRegister = (e) => {
@@ -21,7 +24,7 @@ const Register = () => {
             const email = form.get("email");
             const password = form.get("password")
             console.log(name, photo, email, password);
-            const info = {photoUrl:photo}
+            
 
             if (password.length < 6) {
                   return setShowError('password should be at lest 6 charters');
@@ -32,8 +35,13 @@ const Register = () => {
             else if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
                   return setShowError('password should be at lest 1 special charters');
             }
-            createUser(email, password,info)
+            createUser(email, password,)
                   .then(res => {
+                        
+                        updateProfile(auth.currentUser,{
+                              displayName:name,
+                              photoURL: photo
+                        })
                         setSuccess('Account Create Successfully!',)
                         navigate('/')
                   })

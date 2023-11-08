@@ -4,7 +4,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
       const { user, logOut } = useContext(AuthContext)
-      // console.log(user);
+      console.log(user);
       const handleLogOut = () => {
             logOut()
                   .then(() => { })
@@ -13,8 +13,8 @@ const Navbar = () => {
 
       const links = <>
             <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
-            <li> <NavLink to="/services"className="hover:bg-black hover:text-white" >Services</NavLink></li>
-           
+            <li> <NavLink to="/services" className="hover:bg-black hover:text-white" >Services</NavLink></li>
+
 
             {
                   user?.email ?
@@ -24,16 +24,16 @@ const Navbar = () => {
                                     <details>
                                           <summary>Dashboard</summary>
                                           <ul className="p-2 bg-gray-500 z-50 w-[140px]">
-                                                
+
                                                 <li> <NavLink to="/manageservices" className="hover:bg-red-700 hover:text-white">Manage Services</NavLink></li>
                                                 <li> <NavLink to="/addservices" className="hover:bg-red-700 hover:text-white">Add-services</NavLink></li>
                                                 <li> <NavLink to="/mybookings" className="hover:bg-red-700 hover:text-white">My Bookings</NavLink></li>
-                                                
+
                                           </ul>
                                     </details>   </li>
 
                               {/* nave-test  end*/}
-                              
+
                               <li><button onClick={handleLogOut} >Log Out</button></li>
                         </>
                         : <li> <NavLink to="/login">Log In </NavLink></li>
@@ -62,9 +62,14 @@ const Navbar = () => {
 
                         {/* <p> {user?.email}</p> */}
                         {/* <img alt="" src={user?.photoURL} className="w-12 h-12 rounded-full ri ri dark:bg-yellow-400 ri ri"  /> */}
-                        <div className="avatar">
+                        {/* <div className="avatar">
                               <div className="bg-neutral-focus text-center flex items-center rounded-full w-14">
                               {`${user?.photoURL ? user?.photoURL :user?.email}`}
+                              </div>
+                        </div> */}
+                        <div className="avatar">
+                              <div className="w-[50px] rounded-full">
+                                    <img src={user.photoURL} />
                               </div>
                         </div>
                   </div>
