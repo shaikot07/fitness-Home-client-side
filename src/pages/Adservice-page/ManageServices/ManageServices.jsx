@@ -10,7 +10,7 @@ const ManageServices = () => {
       const [loading,setLoading]=useState(true)
       const [servicess,setServicess] = useState([]);
       const [control,setControl]=useState(true)
-      const url = `http://localhost:5000/newservices?email=${user.email}`;
+      const url = ` https://assignment-11-server-side-jet.vercel.app/newservices?email=${user.email}`;
       useEffect(() => {
             axios.get(url,{withCredentials:true})
               .then(res =>{

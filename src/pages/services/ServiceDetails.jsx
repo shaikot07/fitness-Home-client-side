@@ -18,7 +18,7 @@ const ServiceDetails = () => {
       const { _id, img, name, description, price, gym_owner_name, gym_owner_img, gym_location } = useData || {}
       console.log(useData);
       useEffect(() => {
-            fetch('http://localhost:5000/services')
+            fetch(' https://assignment-11-server-side-jet.vercel.app/services')
                   .then((res) => res.json())
                   .then((data) => {
                         setDetelesData(data);
@@ -58,7 +58,7 @@ const ServiceDetails = () => {
                   // Id:_id
             }
             console.log(booking);
-            fetch('http://localhost:5000/bookings', {
+            fetch(' https://assignment-11-server-side-jet.vercel.app/bookings', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json'

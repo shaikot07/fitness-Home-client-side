@@ -10,7 +10,7 @@ const MyBooking = () => {
 
       useEffect(() => {
             // Define the URL you want to fetch data from
-            const apiUrl = 'http://localhost:5000/bookings';
+            const apiUrl = ' https://assignment-11-server-side-jet.vercel.app/bookings';
 
             axios.get(apiUrl)
                   .then(res => {
@@ -24,7 +24,7 @@ const MyBooking = () => {
                   });
       }, []);
       const handleBookingUpdate = id =>{
-            fetch(`http://localhost:5000/bookings/${id}`,{
+            fetch(` https://assignment-11-server-side-jet.vercel.app/bookings/${id}`,{
                   method:'PATCH',
                   headers:{
                         'content-type': 'application/json'

@@ -22,7 +22,7 @@ const ManageServicCard = ({service,setControl,control}) => {
                   if (result.isConfirmed) {
 
                         console.log('delete confrm');
-                        fetch(`http://localhost:5000/newservices/${_id}`, {
+                        fetch(` https://assignment-11-server-side-jet.vercel.app/newservices/${_id}`, {
                               method: 'DELETE'
                         })
                               .then(res => res.json())
@@ -52,7 +52,7 @@ const ManageServicCard = ({service,setControl,control}) => {
             const area =form.area.value;
            
             const updateData = {img,serviceName,description,price,area,}
-            fetch(`http://localhost:5000/newservices/${_id}`, {
+            fetch(` https://assignment-11-server-side-jet.vercel.app/newservices/${_id}`, {
                   method: 'PATCH',
                   headers: {
                         'content-type': 'application/json'

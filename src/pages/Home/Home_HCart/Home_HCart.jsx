@@ -8,7 +8,7 @@ const Home_HCart = () => {
       const [data, setData] = useState([])
       // console.log(data);
       useEffect(() => {
-            fetch('http://localhost:5000/services')
+            fetch(' https://assignment-11-server-side-jet.vercel.app/services')
                   .then(res => res.json())
                   .then(data => setData(data))
       }, [])

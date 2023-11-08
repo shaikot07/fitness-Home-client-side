@@ -18,7 +18,7 @@ const AddService_page = () => {
             const description = form.description.value;
             const addNewProduct = { img, serviceName, email, providerName, price, area, description, }
             console.log(addNewProduct);
-            fetch('http://localhost:5000/newservices', {
+            fetch(' https://assignment-11-server-side-jet.vercel.app/newservices', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json'

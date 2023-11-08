@@ -69,7 +69,7 @@ const Navbar = () => {
                         </div> */}
                         <div className="avatar">
                               <div className="w-[50px] rounded-full">
-                                    <img src={user.photoURL} />
+                                    <img src={user?.photoURL} />
                               </div>
                         </div>
                   </div>
