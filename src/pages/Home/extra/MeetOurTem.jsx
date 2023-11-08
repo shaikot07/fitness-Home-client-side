@@ -11,7 +11,7 @@ const MeetOurTem = () => {
                         {/* start  */}
 
                         <div className="flex flex-col max-w-md p-6 bg-gray-900 text-gray-100">
-                              <img src="/src/assets/member-1.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
+                              <img src="https://i.ibb.co/0YPZ7c6/member-1.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
                               <div>
                                     <h2 className="text-xl font-semibold">Leroy Jenkins</h2>
                                     <span className="block text-sm text-gray-400">CTO of Company Inc.</span>
@@ -19,7 +19,7 @@ const MeetOurTem = () => {
                               </div>
                         </div>
                         <div className="flex flex-col max-w-md p-6 bg-gray-900 text-gray-100">
-                              <img src="/src/assets/member-2.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
+                              <img src="https://i.ibb.co/Scq12hw/member-2.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
                               <div>
                                     <h2 className="text-xl font-semibold">Leroy Jenkins</h2>
                                     <span className="block text-sm text-gray-400">CTO of Company Inc.</span>
@@ -27,7 +27,7 @@ const MeetOurTem = () => {
                               </div>
                         </div>
                         <div className="flex flex-col max-w-md p-6 bg-gray-900 text-gray-100">
-                              <img src="/src/assets/member-3.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
+                              <img src="https://i.ibb.co/QmWdwbk/member-3.png" alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
                               <div>
                                     <h2 className="text-xl font-semibold">Leroy Jenkins</h2>
                                     <span className="block  text-sm text-gray-400">CTO of Company Inc.</span>

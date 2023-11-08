@@ -37,7 +37,7 @@ const HomeFitures = () => {
                               </div>
                               <div className="lg:w-1/2 xl:w-3/5 bg-gray-800">
                                     <div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
-                                          <img src="/src/assets/feature-bg-1.jpg" alt="" className="rounded-lg shadow-lg bg-gray-500 aspect-video h-[450px] sm:min-h-96" />
+                                          <img src="https://i.ibb.co/RY2vThy/feature-bg-1.jpg" alt="" className="rounded-lg shadow-lg bg-gray-500 aspect-video h-[450px] sm:min-h-96" />
                                     </div>
                               </div>
                         </div>
