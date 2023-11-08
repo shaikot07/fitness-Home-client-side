@@ -131,7 +131,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="" value={img} name='img' className="input input-bordered" />
+                                                                              <input type="text" placeholder="" readOnly value={img} name='img' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   <div>
@@ -140,7 +140,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="" value={name} name='name' className="input input-bordered" />
+                                                                              <input type="text" placeholder="" readOnly value={name} name='name' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   <div>
@@ -149,7 +149,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="" value={user?.email} name='email' className="input input-bordered" />
+                                                                              <input type="text" placeholder=""readOnly value={user?.email} name='email' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   <div>
@@ -178,7 +178,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="" value={`$${price}`} name='price' className="input input-bordered" />
+                                                                              <input type="text" placeholder=""readOnly value={`$${price}`} name='price' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   <div>

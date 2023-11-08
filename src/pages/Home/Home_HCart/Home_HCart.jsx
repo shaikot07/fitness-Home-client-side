@@ -14,14 +14,14 @@ const Home_HCart = () => {
       }, [])
       return (
 
-            <div className='max-w-6xl  mx-auto'>
+            <div className='max-w-6xl  mx-auto bg-[#1F2937] py-6'>
                   <div className='grid md:grid-cols-3 gap-6 mt-20 mb-20 justify-center'>
                         {
                               data.slice(0, 6).map(data => <NewHomeCard key={data.id} data={data}></NewHomeCard>)
                         }
                   </div>
                   <div className='flex justify-center'>
-                  <Link to='/services'><button className='bg-red-600 text-white px-5 py-2 rounded-md mt-5'>Show All</button></Link>
+                  <Link to='/services'><button className='bg-red-600 text-white px-5 py-2 rounded-md mt-5 hover:bg-white hover:text-black'>Show All</button></Link>
                   </div>
             </div>
       );
