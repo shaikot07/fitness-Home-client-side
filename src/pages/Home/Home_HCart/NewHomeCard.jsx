@@ -27,7 +27,7 @@ const NewHomeCard = ({ data }) => {
                                     </div>
                               </div>
 
-                              <Link to={`/servicesditels/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md bg-[#E31C25] hover:bg-slate-800 text-white">View Detail</button></Link>
+                              <Link to={`/servicesditels/${_id}`}><button  type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md bg-[#E31C25] hover:bg-slate-800 text-white">View Detail</button></Link>
                         </div>
                   </div>
             </motion.div>

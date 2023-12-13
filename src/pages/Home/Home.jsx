@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import MeetOurTem from './extra/MeetOurTem';
 import HomeFitures from './extra/HomeFitures';
 import HomePrice from './extra/HomePrice';
+import TestContact from './extra/TestContact';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
                         <MeetOurTem></MeetOurTem>
                         <HomeFitures></HomeFitures>
                         <HomePrice></HomePrice>
+                        <TestContact></TestContact>
                   </div>
                   
             </div>
