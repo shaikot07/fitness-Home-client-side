@@ -4,10 +4,11 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
-import { getAuth, updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import Lottie from 'lottie-react';
 import loginAnimetion from '../../assets/login-animetion.json'
+import { FaGoogle } from 'react-icons/fa6';
 
 
 const Register = () => {
@@ -16,7 +17,8 @@ const Register = () => {
       const [success, setSuccess] = useState('')
       const navigate = useNavigate()
       const auth = getAuth(app)
-
+      const googleProvider = new GoogleAuthProvider()
+      
 
       const handleRegister = (e) => {
             e.preventDefault();
@@ -53,6 +55,18 @@ const Register = () => {
 
       }
 
+      // const googleLogIn= () =>{
+      //       signInWithPopup(auth,googleProvider)
+      //             .then(res =>{
+      //                   console.log('log in sussccess');
+      //                   toast.success('Log in success')
+      //                   navigate("/")
+                       
+      //             })
+      //             .catch(error =>{
+      //                   toast.error('something Rowing')
+      //             })
+      // }
       return (
             <div className=''>
                   <Helmet>
@@ -64,8 +78,8 @@ const Register = () => {
                         </div>
                         <div className="flex flex-col max-w-[400px] h-[600px] p-4 rounded-md sm:p-6 bg-gray-900 text-gray-100 mx-auto mt-12">
                               <div className="mb-8 text-center">
-                                    <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Sign in</h1>
-                                    <p className="text-sm text-gray-400">Sign in to access your account</p>
+                                    <h1 className="my-2 text-4xl font-bold text-[#E31C25]">Register</h1>
+                                    <p className="text-sm text-gray-400">Register to access your account</p>
                               </div>
                               <form onSubmit={handleRegister} className="space-y-6">
                                     <div className="space-y-4">
@@ -83,11 +97,13 @@ const Register = () => {
                                           </div>
                                           <div>
 
-                                                <input type="password" name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
-                                                <div className="flex justify-between mb-2">
+                                                
+                                                <div className="block mb-2 text-sm">
                                                       <label className="text-sm">Password</label>
-                                                      <a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-[#E31C25]">Forgot password?</a>
+                                                      <input type="password" name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+                                                      
                                                 </div>
+                                                <a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-[#E31C25]">Forgot password?</a>
                                           </div>
                                           <p className='text-red-700'>{showError} </p>
                                           <p className='text-green-600'> {success}</p>
@@ -102,6 +118,12 @@ const Register = () => {
                                           </p>
 
                                     </div>
+                                    {/* <div className='text-center mb-0 pb-0'>
+                                                <p className="px-3 text-sm text-center mt-4 mb-4 dark:text-gray-400">---- Login with social accounts ----</p>
+                                                <button onClick={googleLogIn} className=''><FaGoogle className='text-3xl text-[#EC4899]'></FaGoogle>
+                                                </button>
+                                          </div> */}
+                                          
 
                               </form>
                         </div>

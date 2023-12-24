@@ -70,28 +70,31 @@ const LogIn = () => {
                                           </div>
                                           <div>
 
-                                                <input type="password" name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
-                                                <div className="flex justify-between mb-2">
+                                                
+                                                <div className=" block mb-2 text-sm">
                                                       <label className="text-sm">Password</label>
-                                                      <a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-[#E31C25]">Forgot password?</a>
+                                                      <input type="password" name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+                                                     
                                                 </div>
+                                                <a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-white">Forgot password?</a>
                                           </div>
                                           <p className='text-red-700'>{showError} </p>
                                           <p className='text-green-600'> {success}</p>
                                     </div>
                                     <div className="space-y-1">
                                           <div>
-                                                <button type="submit" className="w-full px-6 py-2 font-semibold rounded-md bg-[#E31C25] text-white"> Sign in</button>
+                                                <button type="submit" className="w-full px-6 py-2 font-semibold rounded-md bg-[#E31C25] text-white"> Log in</button>
                                           </div>
                                           <p className="px-1 text-sm text-center text-gray-400">Don't have an account ?
 
-                                                <Link to='/register'><button rel="noopener noreferrer" className="hover:underline text-[#E31C25]">Sign in</button></Link>
+                                                <Link to='/register'><button rel="noopener noreferrer" className="hover:underline text-[#E31C25]"> Register</button></Link>
                                           </p>
 
-                                          <div className='text-center mb-0 pb-0'>
+                                          {/* <div className='text-center mb-0 pb-0'>
                                                 <p className="px-3 text-sm text-center mt-4 mb-4 dark:text-gray-400">---- Login with social accounts ----</p>
                                                 <button onClick={googleLogIn} className=''><FaGoogle className='text-3xl text-[#EC4899]'></FaGoogle>
-                                                </button></div>
+                                                </button>
+                                          </div> */}
                                     </div>
 
                               </form>

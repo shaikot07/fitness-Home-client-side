@@ -36,11 +36,13 @@ const AuthProvider = ({children}) => {
                         axios.post(' https://assignment-11-server-side-jet.vercel.app/jwt', loggedUser,{withCredentials: true})
                               .then(res =>{
                                     console.log('token response', res.data);
+                                    // setLoading(false)
                               })
                   }else{
                         axios.post(' https://assignment-11-server-side-jet.vercel.app/logout', loggedUser,{withCredentials:true})
                               .then(res =>{
                                     console.log(res.data);
+                                    // setLoading(false)
                               })
                   }
             })
