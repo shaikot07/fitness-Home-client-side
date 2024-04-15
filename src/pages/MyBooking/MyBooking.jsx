@@ -13,8 +13,9 @@ const MyBooking = () => {
 
       useEffect(() => {
             // Define the URL you want to fetch data from
-            // const apiUrl = ' https://assignment-11-server-side-jet.vercel.app/bookings';
-            const apiUrl = ` http://localhost:5000/bookings${user.email}`;
+            const apiUrl = ` https://assignment-11-server-side-jet.vercel.app/bookings?email=${user.email}`;
+            // const apiUrl = ` http://localhost:5000/bookings${user.email}`;
+            // const apiUrl = `http://localhost:5000/bookings?email=${user.email}`;
 
             axios.get(apiUrl)
                   .then(res => {
