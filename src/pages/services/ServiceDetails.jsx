@@ -46,7 +46,7 @@ const ServiceDetails = () => {
             const date = form.date.value;
             const instruction = form.instruction.value;
             const price = form.price.value;
-            const provider = form.provider.value;
+            const providerEmail = form.providerEmail.value;
             const booking = {
                   img,
                   name,
@@ -54,7 +54,7 @@ const ServiceDetails = () => {
                   date,
                   instruction,
                   price,
-                  provider,
+                  providerEmail,
                   // Id:_id
             }
             console.log(booking);
@@ -149,7 +149,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder=""readOnly value={user?.email} name='email' className="input input-bordered" />
+                                                                              <input type="email" placeholder=""readOnly value={user?.email} name='email' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                                   <div>
@@ -187,7 +187,7 @@ const ServiceDetails = () => {
                                                                         </label>
                                                                         <label className="input-group input-group-vertical">
 
-                                                                              <input type="text" placeholder="provider@gmail.com" name='provider' className="input input-bordered" />
+                                                                              <input type="email" placeholder="provider@gmail.com" name='providerEmail' className="input input-bordered" />
                                                                         </label>
                                                                   </div>
                                                             </div>

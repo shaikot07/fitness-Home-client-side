@@ -1,16 +1,20 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import MyBookingLeft from './MyBookingLeft';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const MyBooking = () => {
       const [data, setData] = useState([]);
       const [loading, setLoading] = useState(true);
+      const {user}=useContext(AuthContext);
+      console.log(user);
 
       useEffect(() => {
             // Define the URL you want to fetch data from
-            const apiUrl = ' https://assignment-11-server-side-jet.vercel.app/bookings';
+            // const apiUrl = ' https://assignment-11-server-side-jet.vercel.app/bookings';
+            const apiUrl = ` http://localhost:5000/bookings${user.email}`;
 
             axios.get(apiUrl)
                   .then(res => {
@@ -56,7 +60,7 @@ const MyBooking = () => {
                   <div className=''>
 
                    {
-                        data.length === 0 ? <h2 className='text-3xl text-yellow-400 mt-10 mb-28'>Not Booking data available</h2>:
+                        data.length === 0 ? <h2 className='text-3xl text-yellow-400 mt-10 mb-28'>No Booking data available</h2>:
                         data.map(booking =><MyBookingLeft key={booking._id} 
                               booking={booking}
                               handleBookingUpdate={handleBookingUpdate}

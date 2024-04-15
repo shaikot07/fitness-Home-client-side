@@ -43,6 +43,7 @@ const Register = () => {
                   .then(res => {
 
                         updateProfile(auth.currentUser, {
+                              
                               displayName: name,
                               photoURL: photo
                         })
